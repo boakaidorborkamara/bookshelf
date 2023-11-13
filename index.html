@@ -5,8 +5,164 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>BookShelf</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+
 </head>
 <body>
+
+    <header class="container">
+        <nav class="navbar navbar-expand-sm bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand fw-bold" href="#"><i class="bi bi-book-half"></i> BOOKSHELF</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Login</a>
+                  </li>
+                </ul>
+                <!-- <span class="navbar-text">
+                  Navbar text with an inline element
+                </span> -->
+              </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="bg-dark align-tiems-center d-flex justify-content-center align-tiems-center" style="height: 50vh;">
+           <div class="w-50 d-flex flex-column justify-content-center align-tiems-center">
+                <h3 class="text-light">Find your books</h3>
+                <div class="d-flex">
+                    <form class="form-inline my-2 my-lg-0  d-flex flex-rows w-75 me-2">
+                        <input class="form-control mr-sm-2 rounded-0" type="search" placeholder="Search" aria-label="Search">
+                        <!-- <button class="btn btn-success rounded-0 my-2 my-sm-0" type="submit">Search</button> -->
+                        
+                    </form>
+                    <div class="dropdown ml-5">
+                        <button class="btn btn-secondary dropdown-toggle rounded-0" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Category
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" href="#">Action</a>
+                          <a class="dropdown-item" href="#">Another action</a>
+                          <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </div>
+                </div>
+           </div>
+            
+        </section>
+        <section class="container my-5">
+            <button type="button" class="btn btn-success"><i class="bi bi-journal-plus"></i> Add New Book</button>
+        </section>
+        <section class="container mb-5 d-flex flex-wrap justify-content-start gap-4">
+            <div class="card shadow-sm " style="width: 18rem;">
+                <img src="./assets/images/book-cover-placeholder.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title m-0">Book Title</h5>
+                  <p class="card-text m-0">Author's Name</p>
+                  <p class="card-text m-0">Number of pages</p>
+                  <button type="button" class="btn btn-success w-100 mt-4 mb-2"><i class="bi bi-emoji-smile-fill"></i> Read</button>
+                  <button type="button" class="btn btn-secondary w-100 my-2">Remove</button>
+
+                </div>
+            </div>
+
+            <div class="card shadow-sm" style="width: 18rem;">
+                <img src="./assets/images/book-cover-placeholder.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title m-0">Book Title</h5>
+                  <p class="card-text m-0">Author's Name</p>
+                  <p class="card-text m-0">Number of pages</p>
+                  <button type="button" class="btn btn-success w-100 mt-4 mb-2"><i class="bi bi-emoji-frown-fill"></i> Unread</button>
+                  <button type="button" class="btn btn-secondary w-100 my-2">Remove</button>
+
+                </div>
+            </div>
+
+            <div class="card shadow-sm " style="width: 18rem;">
+                <img src="./assets/images/book-cover-placeholder.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title m-0">Book Title</h5>
+                  <p class="card-text m-0">Author's Name</p>
+                  <p class="card-text m-0">Number of pages</p>
+                  <button type="button" class="btn btn-success w-100 mt-4 mb-2">Read</button>
+                  <button type="button" class="btn btn-secondary w-100 my-2">Remove</button>
+
+                </div>
+            </div>
+
+            <div class="card shadow-sm " style="width: 18rem;">
+                <img src="./assets/images/book-cover-placeholder.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title m-0">Book Title</h5>
+                  <p class="card-text m-0">Author's Name</p>
+                  <p class="card-text m-0">Number of pages</p>
+                  <button type="button" class="btn btn-success w-100 mt-4 mb-2">Read</button>
+                  <button type="button" class="btn btn-secondary w-100 my-2">Remove</button>
+
+                </div>
+            </div>
+
+            <div class="card shadow-sm " style="width: 18rem;">
+                <img src="./assets/images/book-cover-placeholder.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title m-0">Book Title</h5>
+                  <p class="card-text m-0">Author's Name</p>
+                  <p class="card-text m-0">Number of pages</p>
+                  <button type="button" class="btn btn-success w-100 mt-4 mb-2">Read</button>
+                  <button type="button" class="btn btn-secondary w-100 my-2">Remove</button>
+
+                </div>
+            </div>
+
+            <div class="card shadow-sm " style="width: 18rem;">
+                <img src="./assets/images/book-cover-placeholder.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title m-0">Book Title</h5>
+                  <p class="card-text m-0">Author's Name</p>
+                  <p class="card-text m-0">Number of pages</p>
+                  <button type="button" class="btn btn-success w-100 mt-4 mb-2">Read</button>
+                  <button type="button" class="btn btn-secondary w-100 my-2">Remove</button>
+
+                </div>
+            </div>
+
+            <div class="card shadow-sm " style="width: 18rem;">
+                <img src="./assets/images/book-cover-placeholder.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title m-0">Book Title</h5>
+                  <p class="card-text m-0">Author's Name</p>
+                  <p class="card-text m-0">Number of pages</p>
+                  <button type="button" class="btn btn-success w-100 mt-4 mb-2">Read</button>
+                  <button type="button" class="btn btn-secondary w-100 my-2">Remove</button>
+
+                </div>
+            </div>
+
+            <div class="card shadow-sm " style="width: 18rem;">
+                <img src="./assets/images/book-cover-placeholder.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title m-0">Book Title</h5>
+                  <p class="card-text m-0">Author's Name</p>
+                  <p class="card-text m-0">Number of pages</p>
+                  <button type="button" class="btn btn-success w-100 mt-4 mb-2">Read</button>
+                  <button type="button" class="btn btn-secondary w-100 my-2">Remove</button>
+
+                </div>
+            </div>
+        </section>
+    </main>
     
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
 </body>
 </html>
