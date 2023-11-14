@@ -26,11 +26,12 @@
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
                   </li> -->
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Login</a>
+                    <a class="nav-link bg-primary fw-bold text-light" href="#">Signup</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Signup</a>
+                    <a class="nav-link" href="#">Login</a>
                   </li>
+                 
                 </ul>
                 <!-- <span class="navbar-text">
                   Navbar text with an inline element
@@ -43,7 +44,7 @@
         <!-- search section  -->
         <section class="bg-dark align-tiems-center d-flex justify-content-center align-tiems-center" style="height: 50vh;">
            <div class="w-50 d-flex flex-column justify-content-center align-tiems-center">
-                <h3 class="text-light mb-4">Find your books</h3>
+                <h2 class="text-light mb-4">Find African Books</h2>
                 <div class="d-flex">
                     <form class="form-inline my-2 my-lg-0  d-flex flex-rows w-100 me-2">
                         <input class="form-control mr-sm-2 rounded-0" type="search" placeholder="Search for book  "  aria-label="Search">
@@ -73,44 +74,59 @@
                     </div>
                     <div class="modal-body">
                         <!-- start  -->
-                        <form>
+                        <form id="new-book-form" >
                             <div class="form-group mb-4">
-                              <label for="title">Title</label>
-                              <input type="text" class="form-control" id="title" aria-describedby="bookTitle">
+                              <label for="title">Title*</label>
+                              <input type="text shadow-sm" required class="form-control" id="title" aria-describedby="bookTitle" >
                             </div>
                             <div class="form-group mb-4">
-                                <label for="title">Author</label>
-                                <input type="text" class="form-control" id="author" aria-describedby="bookAuthor">
+                                <label for="title">Author*</label>
+                                <input type="text" required class="form-control" id="author" aria-describedby="bookAuthor">
                             </div>
                             <div class="form-group mb-4">
-                                <label for="title">Pages</label>
-                                <input type="number" class="form-control" id="pages" aria-describedby="bookPages">
+                                <label for="title">Number of Pages*</label>
+                                <input type="number" required class="form-control" id="pages" aria-describedby="bookPages">
                             </div>
-
+<!-- 
                             <div class="form-group mb-4">
                                 <label for="title">Cover Image</label>
                                 <input type="file" class="form-control" id="cover-image" aria-describedby="bookCoverImage">
+                            </div> -->
+                            
+                            <div class="d-flex mb-4">
+                                <div class="form-check me-4">
+                                    <input class="form-check-input" type="radio" name="Book Status" id="Unread" value="Unread" checked>
+                                    <label class="form-check-label" for="Unread" >
+                                      Unread
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="Book Status" id="Read" value="Read"  >
+                                    <label class="form-check-label" for="Read">
+                                      Read
+                                   </label>
+                                </div>
                             </div>
-                            <div class="form-check mb-4">
-                                <input type="checkbox" class="form-check-input" id="Read">
-                                <label class="form-check-label" for="Read">Read</label>
 
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                                <button type="submit" class="btn btn-success" id="add-book-btn">Add New Book</button>
                             </div>
-                          </form>
+                        </form>
                         <!-- end  -->
                     </div>
-                    <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-                    <button type="button" class="btn btn-success">Add New Book</button>
-                    </div>
+                    <!-- <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-success">Add New Book</button>
+                    </div> -->
                 </div>
                 </div>
             </div>
         </section>
 
         <!-- available books section  -->
-        <section class="container mb-5 d-flex flex-wrap justify-content-start gap-4">
-            <div class="card shadow-sm " style="width: 18rem;">
+        <section class="container mb-5 d-flex flex-wrap justify-content-start gap-4" id="book-section">
+            <!-- <div class="card shadow-sm " style="width: 18rem;">
                 <div class="h-50">
                     <img src="./assets/images/placeholder2.jpg" class="card-img-top h-100 w-100" alt="...">
                 </div>
@@ -122,50 +138,7 @@
                   <button type="button" class="btn btn-secondary w-100  mb-2">Remove</button>
 
                 </div>
-            </div>
-
-            <div class="card shadow-sm " style="width: 18rem;">
-                <div class="h-50">
-                    <img src="./assets/images/placeholder2.jpg" class="card-img-top h-100 w-100" alt="...">
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title m-0">Book Title</h5>
-                  <p class="card-text m-0">Author's Name</p>
-                  <p class="card-text m-0">Number of pages</p>
-                  <button type="button" class="btn btn-success w-100 mt-4 mb-2">Read</button>
-                  <button type="button" class="btn btn-secondary w-100  mb-2">Remove</button>
-
-                </div>
-            </div>
-
-            <div class="card shadow-sm " style="width: 18rem;">
-                <div class="h-50">
-                    <img src="./assets/images/placeholder2.jpg" class="card-img-top h-100 w-100" alt="...">
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title m-0">Book Title</h5>
-                  <p class="card-text m-0">Author's Name</p>
-                  <p class="card-text m-0">Number of pages</p>
-                  <button type="button" class="btn btn-success w-100 mt-4 mb-2">Read</button>
-                  <button type="button" class="btn btn-secondary w-100  mb-2">Remove</button>
-
-                </div>
-            </div>
-
-
-            <div class="card shadow-sm " style="width: 18rem;">
-                <div class="h-50">
-                    <img src="./assets/images/placeholder2.jpg" class="card-img-top h-100 w-100" alt="...">
-                </div>
-                <div class="card-body">
-                  <h5 class="card-title m-0">Book Title</h5>
-                  <p class="card-text m-0">Author's Name</p>
-                  <p class="card-text m-0">Number of pages</p>
-                  <button type="button" class="btn btn-success w-100 mt-4 mb-2">Read</button>
-                  <button type="button" class="btn btn-secondary w-100  mb-2">Remove</button>
-
-                </div>
-            </div>
+            </div> -->
 
         </section>
     </main>
