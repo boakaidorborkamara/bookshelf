@@ -68,11 +68,19 @@ function getCheckedElementValue(radio_buttons){
 function createBook(){
     let {book_data} = getNewBookData();
     Library.push(new Book(book_data.title, book_data.author,book_data.pages, book_data.status));
-    console.log(Library);
+
+    displayBooks(Library);
 }
 
 
 function displayBooks(books){
+
+    while(books_container_ele.children.length !== 0){
+        books_container_ele.firstChild.remove();
+        console.log("remove first child")
+    }
+    console.log("tt", );
+
     let book_html_layout = `
         <div class="card shadow-sm " style="width: 18rem;">
             <div class="h-50">
@@ -91,7 +99,7 @@ function displayBooks(books){
 
     books.forEach((book)=>{
         console.log(book);
-        let book_html_layout = `
+        let book_card_template = `
             <div class="card shadow-sm " style="width: 18rem;">
                 <div class="h-50">
                     <img src="./assets/images/placeholder2.jpg" class="card-img-top h-100 w-100" alt="...">
@@ -107,6 +115,6 @@ function displayBooks(books){
             </div>
         `;
 
-        books_container_ele.insertAdjacentHTML("beforeend", book_html_layout)
+        books_container_ele.insertAdjacentHTML("beforeend", book_card_template);
     })
 }
