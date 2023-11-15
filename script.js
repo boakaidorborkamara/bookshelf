@@ -4,7 +4,6 @@ let books_container_ele = document.getElementById("book-section");
 
 
 // BOOK CONSTRUCTORS///////////////////////////////////////////////////
-
 // Create book constructor 
 function Book(title, author, pages, status ){
     this.title = title;
@@ -12,7 +11,6 @@ function Book(title, author, pages, status ){
     this.pages = pages;
     this.status = status;
 }
-
 
 // Library Constructor 
 function Library(){
@@ -98,8 +96,7 @@ function Library(){
 
 }
 
-
-//create object from Library constructor
+//create a new Library from constructor
 let bookShelf = new Library();
 
 
